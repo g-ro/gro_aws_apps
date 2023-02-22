@@ -1,0 +1,39 @@
+{
+  "name": "gro-express-lambda-backend",
+  "version": "1.0.0",
+  "description": "AWS Serverless backend uses Express based Lambdas",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p .",
+    "clean": "run-script-os",
+    "clean:win32": "del /F/S/Q build > nul",
+    "clean:default": "rm -rf build/*",
+    "copy": "run-script-os",
+    "copy:win32": "xcopy /E/H/C/I/Q node_modules build\\node_modules && copy package.json build",
+    "copy:default": "cp -R node_modules build && cp package.json build",
+    "package": "npm run build && npm run clean && npm run copy && npm run build",
+    "start": "node ./build/main.local.js",
+    "dev": "nodemon ./src/main.local.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "aws",
+    "lambda",
+    "ora"
+  ],
+  "author": "contact.rohitgupta@gmail.com",
+  "license": "unknown",
+  "dependencies": {
+    "aws-sdk": "^2.1307.0",
+    "aws-serverless-express": "^3.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "nodemon": "^2.0.20",
+    "run-script-os": "^1.1.6",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
+  }
+}
