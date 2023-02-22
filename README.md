@@ -1,2 +1,3 @@
 # gro_aws_apps
-Sample AWS Apps
+
+The repository contains a collection of AWS Apps.
