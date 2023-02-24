@@ -3,5 +3,6 @@ build
 cdk.out
 
 *.log
+*-orig.json
 
 
