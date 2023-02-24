@@ -1,0 +1,12 @@
+{
+  "useEnvironment": "%",
+  "common": {
+    "author": "%"
+  },
+  "environments": [
+    {
+      "environment": "%",
+      "apiUrl": "%"
+    }
+  ]
+}
