@@ -1,0 +1,12 @@
+{
+  "useEnvironment": "localhost",
+  "common": {
+    "author": "grohit"
+  },
+  "environments": [
+    {
+      "environment": "localhost",
+      "apiUrl": "%add URL of Cloud deployed API that you want to connect to%"
+    }
+  ]
+}
