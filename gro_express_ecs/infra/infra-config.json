@@ -1,0 +1,15 @@
+{
+  "common": {
+    "vpcNameSuffix": "vpc",
+    "maxAzs": 2,
+    "natGateways": 1,
+    "cidr": "10.10.0.0/16",
+    "containerNameSuffix": "container-01"
+  },
+  "environments": [
+    {
+      "environment": "dev",
+      "containerImage": "amazon/amazon-ecs-sample"
+    }
+  ]
+}
