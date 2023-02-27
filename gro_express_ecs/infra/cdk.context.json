@@ -3,5 +3,70 @@
     "ap-southeast-2a",
     "ap-southeast-2b",
     "ap-southeast-2c"
-  ]
+  ],
+  "vpc-provider:account=740358308248:filter.tag:Name=dev-gro-demo-002-vpc:region=ap-southeast-2:returnAsymmetricSubnets=true": {
+    "vpcId": "vpc-0efbc1c768dcc9285",
+    "vpcCidrBlock": "10.10.0.0/16",
+    "availabilityZones": [],
+    "subnetGroups": [
+      {
+        "name": "Private",
+        "type": "Private",
+        "subnets": [
+          {
+            "subnetId": "subnet-0af42583b9cfc933c",
+            "cidr": "10.10.2.0/28",
+            "availabilityZone": "ap-southeast-2a",
+            "routeTableId": "rtb-0e41c96c2fff9b807"
+          },
+          {
+            "subnetId": "subnet-06eb851e7de2ef688",
+            "cidr": "10.10.2.16/28",
+            "availabilityZone": "ap-southeast-2b",
+            "routeTableId": "rtb-088977702c245ea75"
+          }
+        ]
+      },
+      {
+        "name": "Public",
+        "type": "Public",
+        "subnets": [
+          {
+            "subnetId": "subnet-04e06baa5797aa9f6",
+            "cidr": "10.10.0.0/24",
+            "availabilityZone": "ap-southeast-2a",
+            "routeTableId": "rtb-0e7353c73e89fd6ff"
+          },
+          {
+            "subnetId": "subnet-01a5dfd9205f07619",
+            "cidr": "10.10.1.0/24",
+            "availabilityZone": "ap-southeast-2b",
+            "routeTableId": "rtb-0d34fbde9e0c031e2"
+          }
+        ]
+      },
+      {
+        "name": "Database",
+        "type": "Isolated",
+        "subnets": [
+          {
+            "subnetId": "subnet-0b433b994224ba22a",
+            "cidr": "10.10.2.32/28",
+            "availabilityZone": "ap-southeast-2a",
+            "routeTableId": "rtb-04a4399dae893f57b"
+          },
+          {
+            "subnetId": "subnet-01fed2bfe72a81b67",
+            "cidr": "10.10.2.48/28",
+            "availabilityZone": "ap-southeast-2b",
+            "routeTableId": "rtb-01db84630bcc0e0a6"
+          }
+        ]
+      }
+    ]
+  },
+  "hosted-zone:account=740358308248:domainName=grohit.net:region=ap-southeast-2": {
+    "Id": "/hostedzone/Z3HQZVGPHBQ9M9",
+    "Name": "grohit.net."
+  }
 }

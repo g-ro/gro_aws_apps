@@ -13,11 +13,12 @@ enum AWSResourceType {
   VPC = "Vpc",
   SUBNET = "Subnet",
   ECS_CLUSTER = "EcsCluster",
+  ECS_CLUSTER_CAPACITY = "EcsClusterCapacity",
   ROLE = "Role",
   CONTAINER = "Container",
   EC2_TASKDEF = "Ec2TaskDef",
   EC2_SERVICE = "Ec2Service",
-  ALB = "alb",
+  ALB = "Alb",
   ALB_LISTENER = "AlbListener",
   ALB_LISTENER_TARGET = "AlbListenerTarget",
 

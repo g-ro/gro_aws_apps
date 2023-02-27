@@ -4,11 +4,20 @@
     "maxAzs": 2,
     "natGateways": 1,
     "cidr": "10.10.0.0/16",
-    "containerNameSuffix": "container-01"
+    "containerNameSuffix": "container-01",
+    "domainName": "grohit.net",
+    "ssmParamKey4SSLCertArn": "/acm/ap-southeast-2/_.grohit.net",
+    "keyPairName": "grohit-740358308248-key-pair"
   },
   "environments": [
     {
       "environment": "dev",
+      "containerImage": "guptaro/gro_express_ecs:1.0.0",
+      "apiDomain": "dev-gro-demo-002-api.grohit.net",
+      "apiUrl": "https://dev-gro-demo-002-api.grohit.net"
+    },
+    {
+      "environment": "qa",
       "containerImage": "amazon/amazon-ecs-sample"
     }
   ]

@@ -2,6 +2,7 @@ import { Construct } from "constructs";
 import * as cdk from "aws-cdk-lib";
 import * as ec2 from "aws-cdk-lib/aws-ec2";
 
+
 import { CDKContext } from "../types";
 import { AWSResourceType as RT, makeId } from "./aws-resource-helper";
 
@@ -57,7 +58,7 @@ export class TypicalVPCStack extends cdk.Stack {
         });
         new cdk.CfnOutput(this, this._id(RT.CFN_OUTPUT, this._name("vpcArn")), {
             value: vpc.vpcArn,
-            exportName: this._name("vpcName"),
+            exportName: this._name("vpcArn"),
         });
         new cdk.CfnOutput(this, this._id(RT.CFN_OUTPUT, this._name("VpcId")), {
             value: vpc.vpcId,
@@ -71,8 +72,17 @@ export class TypicalVPCStack extends cdk.Stack {
                 exportName: name,
             });
         });
+        counter = 0;
         vpc.publicSubnets.forEach(ps => {
             const name = this._name("PublicSubnet" + ++counter);
+            new cdk.CfnOutput(this, this._id(RT.CFN_OUTPUT, name), {
+                value: ps.subnetId,
+                exportName: name,
+            });
+        });
+        counter = 0;
+        vpc.isolatedSubnets.forEach(ps => {
+            const name = this._name("IsolatedSubnet" + ++counter);
             new cdk.CfnOutput(this, this._id(RT.CFN_OUTPUT, name), {
                 value: ps.subnetId,
                 exportName: name,

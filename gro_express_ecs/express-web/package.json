@@ -1,0 +1,30 @@
+{
+  "name": "express-web",
+  "version": "1.0.0",
+  "description": "very simple express app for demo",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p .",
+    "package": "npm run build",
+    "start": "node ./build/index.js",
+    "dev": "nodemon ./src/index.ts",
+    "build-image": "docker build . -t guptaro/gro_express_ecs:1.0.0",
+    "push-image": "docker push guptaro/gro_express_ecs:1.0.0",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express"
+  ],
+  "author": "rohitg",
+  "license": "Apache2.0",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@types/node": "^18.13.0",
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
+  }
+}

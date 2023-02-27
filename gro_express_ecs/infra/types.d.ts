@@ -6,6 +6,8 @@ export type CDKContext = {
     owner: string;
     serverless: string;
     domainName: string;
+    apiDomain: string;
+    apiUrl: string;
     // 
     maxAzs: number;
     natGateways: number;
@@ -15,4 +17,7 @@ export type CDKContext = {
     containerImage: string;
     //
     containerNameSuffix: string;
+    //
+    ssmParamKey4SSLCertArn: string;
+    keyPairName: string;
 }
