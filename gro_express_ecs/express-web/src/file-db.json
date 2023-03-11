@@ -1,0 +1,27 @@
+{
+  "entities": [
+    {
+      "name": "contact",
+      "data": [
+        {
+          "id": "1",
+          "name": "John Hunter",
+          "address": "100 George Street, Sydney, NSW, 2000, Australia",
+          "email": "john.hunter@mail.com"
+        },
+        {
+          "id": "2",
+          "name": "Sarah Jones",
+          "address": "51 Kent Street, Sydney, NSW, 2000, Australia",
+          "email": "sarah.jones@mail.com"
+        },
+        {
+          "id": "3",
+          "name": "Gunther Muster",
+          "address": "20 King Street, Sydney, NSW, 2000, Australia",
+          "email": "gunther.muster@mail.com"
+        }
+      ]
+    }
+  ]
+}

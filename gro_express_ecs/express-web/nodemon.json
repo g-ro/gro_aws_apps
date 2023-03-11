@@ -1,0 +1,4 @@
+{
+  "watch": ["src/"],
+  "ext": "handlebars, ts, js, css"
+}
