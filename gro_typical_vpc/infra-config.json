@@ -1,0 +1,35 @@
+{
+  "common": {
+    "vpcNameSuffix": "vpc"
+  },
+  "environments": [
+    {
+      "environment": "dev",
+      "maxAzs": 2,
+      "natGateways": 1,
+      "cidr": "192.168.0.0/22",
+      "publicCidrMask": 24,
+      "privateCidrMask": 26,
+      "databaseCidrMask": 28
+    },
+    {
+      "environment": "qa",
+      "maxAzs": 2,
+      "natGateways": 1,
+      "cidr": "192.168.4.0/22",
+      "publicCidrMask": 24,
+      "privateCidrMask": 27,
+      "databaseCidrMask": 28
+    },
+    {
+      "environment": "prod",
+      "maxAzs": 3,
+      "natGateways": 2,
+      "cidr": "172.16.0.0/20",
+      "cidr2": "192.168.16.0/20",
+      "publicCidrMask": 22,
+      "privateCidrMask": 24,
+      "databaseCidrMask": 27
+    }
+  ]
+}
