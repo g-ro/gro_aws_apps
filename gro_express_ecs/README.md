@@ -2,7 +2,7 @@
 
 ### This application demonstrates following technologies and frameworks
 
-1. express-js based web application 
+1. expressjs based web application 
 2. handlebars based ui, support to public & static files such as css, js
 3. REST based API
 4. Ability to dockerize the solution and push to dockerhub
